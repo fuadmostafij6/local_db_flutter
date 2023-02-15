@@ -17,6 +17,8 @@ class HttpRequest{
     var responsedata = await http.Response.fromStream(response);
 
     if (response.statusCode == 200) {
+      print("RESPONSE --${responsedata.body}");
+      print("RESPONSE --${responsedata.reasonPhrase}");
       return productModelFromJson(responsedata.body);
     } else {
       print(response.reasonPhrase);

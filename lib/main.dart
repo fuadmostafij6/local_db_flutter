@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_todo/HomeScreen/new_home_page.dart';
 
 import 'CourseModule/DataAddPage.dart';
 import 'HomeScreen/home.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: DataAddPage(),
+      home: NewHomePage(),
     );
   }
 }
