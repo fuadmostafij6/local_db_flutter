@@ -37,19 +37,14 @@ class HiveDb{
  //  return box.delete(hiveNoteModel.key);
  // }
 
- static Future<List<ProductModel>?> getAllNote() async {
-   List<ProductModel>? data =[];
-   List<Product> productdata = [];
+ static Future<ProductModel?> getAllNote() async {
+   ProductModel? productModel;
+
 
   final  maps =  box.keys.map((key) {
-   final item = box.get(key);
-   ProductModel hiveNoteModel =ProductModel(
-    products:   productdata
-       // key: key,
-       // title: item["title"],
-       // descrtiption: item["descrtiption"]
-   );
-   data.add(hiveNoteModel);
+   Map<dynamic, dynamic> item = box.get(key);
+   print(item);
+   productModel = ProductModel.fromJson(item);
 
   }).toList();
 
@@ -59,7 +54,7 @@ class HiveDb{
 
 
 
-   return data;
+   return productModel;
 
   }
  }

@@ -17,11 +17,11 @@ class ProductModel {
 
   List<Product>? products;
 
-  factory ProductModel.fromJson(Map<String, dynamic> json) => ProductModel(
+  factory ProductModel.fromJson(Map<dynamic, dynamic> json) => ProductModel(
     products: json["products"] == null ? [] : List<Product>.from(json["products"]!.map((x) => Product.fromJson(x))),
   );
 
-  Map<String, dynamic> toJson() => {
+  Map<dynamic, dynamic> toJson() => {
     "products": products == null ? [] : List<dynamic>.from(products!.map((x) => x.toJson())),
   };
 }
@@ -93,7 +93,7 @@ class Product {
   DateTime? delivryDate;
   int? maxQty;
 
-  factory Product.fromJson(Map<String, dynamic> json) => Product(
+  factory Product.fromJson(Map<dynamic, dynamic> json) => Product(
     id: json["id"],
     name: json["name"],
     slug: json["slug"],
@@ -127,7 +127,7 @@ class Product {
     maxQty: json["max_qty"],
   );
 
-  Map<String, dynamic> toJson() => {
+  Map<dynamic, dynamic> toJson() => {
     "id": id,
     "name": name,
     "slug": slug,
@@ -173,13 +173,13 @@ class Image {
   String? original;
   int? id;
 
-  factory Image.fromJson(Map<String, dynamic> json) => Image(
+  factory Image.fromJson(Map<dynamic, dynamic> json) => Image(
     thumbnail: json["thumbnail"],
     original: json["original"],
     id: json["id"],
   );
 
-  Map<String, dynamic> toJson() => {
+  Map<dynamic, dynamic> toJson() => {
     "thumbnail": thumbnail,
     "original": original,
     "id": id,
