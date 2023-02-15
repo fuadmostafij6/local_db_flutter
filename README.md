@@ -1,17 +1,29 @@
-# get_todo
+# Local DB
 
-A new Flutter project.
 
-## Getting Started
+## Hive
+## Sqflite
+## Isar
 
-This project is a starting point for a Flutter application.
+packages:
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+multi_select_flutter: ^4.1.3
+sqflite: ^2.2.4+1
+hive: ^2.2.3
+hive_flutter: ^1.1.0
+isar: ^3.0.5
+isar_flutter_libs: ^3.0.5
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+#for_generate_code
+isar_generator: ^3.0.5
+build_runner: ^2.3.3
+
+#command
+flutter pub get && flutter pub run build_runner build --delete-conflicting-outputs
 # local_db_flutter
+
+
+
+
